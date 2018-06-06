@@ -15,7 +15,6 @@ public class GiphyRestClient {
     private static final String BASE_URL = "api.giphy.com";
     private static final String URL_TRENDING_GIFS = "v1/gifs/trending";
     private static final String URL_SEARCH_GIFS = "v1/gifs/search";
-    private static final String URL_GIF_BY_ID = "v1/gifs";
     private static final String GIPHY_API_KEY = "tKSHo2xJBooBR7H2o7AYdl4hu6YRF7Wf";
     private static final String RECORDS_PAGE_SIZE = "30";
 
@@ -46,15 +45,6 @@ public class GiphyRestClient {
                 .addPathSegments(URL_SEARCH_GIFS)
                 .addQueryParameter("q", searchTerm)
                 .addQueryParameter("limit", RECORDS_PAGE_SIZE)
-                .build();
-
-        makeGetRequest(httpUrl, callback);
-    }
-
-    public void getGifById(String id, Callback callback) {
-        HttpUrl httpUrl = getBaseUrlBuilder()
-                .addPathSegments(URL_GIF_BY_ID)
-                .addPathSegment(id)
                 .build();
 
         makeGetRequest(httpUrl, callback);
