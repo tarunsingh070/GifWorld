@@ -1,8 +1,6 @@
 <resources>
     <string name="app_name">Gif World</string>
 
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="no_gifs_found">No gifs found!</string>
     <string name="hint_search">Search Gifs</string>
     <string name="unknown">Unknown</string>

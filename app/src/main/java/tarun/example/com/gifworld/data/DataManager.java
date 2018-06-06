@@ -12,8 +12,6 @@ public interface DataManager {
 
     void getSearchedGifs(String searchTerm, Callback callback);
 
-    void getGifById(String id, Callback callback);
-
     Task<Void> addOrUpdateGif(FirebaseGif firebaseGif);
 
     void getRankedGifsFromFirebase(ValueEventListener listener);

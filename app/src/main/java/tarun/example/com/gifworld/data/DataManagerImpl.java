@@ -43,8 +43,4 @@ public class DataManagerImpl implements DataManager {
         restClient.getSearchedGifs(searchTerm, callback);
     }
 
-    @Override
-    public void getGifById(String id, Callback callback) {
-        restClient.getGifById(id, callback);
-    }
 }

@@ -211,6 +211,12 @@ public class GifListFragment extends Fragment implements GifListContract.View, G
     }
 
     @Override
+    public void onDestroyView() {
+        super.onDestroyView();
+        presenter.dropView();
+    }
+
+    @Override
     public void onItemClick(AdapterGifItem gif) {
         mListener.onGifClicked(gif);
     }

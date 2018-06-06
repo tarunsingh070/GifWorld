@@ -250,7 +250,7 @@ public class GifListPresenter implements GifListContract.Presenter {
 
     @Override
     public void searchQueryChanged(String query) {
-        if (!view.isViewVisible()) {
+        if (view == null || !view.isViewVisible()) {
             return;
         }
 
